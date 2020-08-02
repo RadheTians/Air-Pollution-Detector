@@ -1,0 +1,164 @@
+\documentclass[12pt,a4paper]{report}
+%\linespread{1.3}
+\usepackage{fullpage}
+\usepackage{setspace}
+
+\usepackage{pifont,multirow}
+\usepackage{enumitem}
+\usepackage{graphics,graphicx,url, wrapfig,latexsym,epsfig}
+\usepackage{hyperref,fancyhdr,comment,epic}
+\usepackage{amsmath,algorithm}
+\usepackage{algpseudocode}
+\usepackage{makeidx,setspace}
+\usepackage{longtable}
+\usepackage{mdwmath,mdwtab}
+\usepackage{stfloats}
+\usepackage{fontspec,verbatim}
+\usepackage[titletoc]{appendix}
+\usepackage[stable]{footmisc}
+\usepackage{listings}
+\usepackage{xcolor}
+%---------------------------------------------------------------------
+\interfootnotelinepenalty=10000
+%---------------------------------------------------------------------
+\font\en="Latin Modern Roman Unslanted:script=roman" at 12pt
+\font\ens="Latin Modern Roman Unslanted:script=roman" at 12pt
+\font\ipa="Doulos SIL:script=roman" at 11pt
+\font\ipas="Doulos SIL:script=roman" at 9pt
+
+%----------------------------------------------------------------------
+\graphicspath{{figures/}}
+\setlength{\parskip}{1mm}
+\setlength{\lineskip}{1mm}
+\setlength{\parindent}{20pt}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdfauthor={RadheTians},     % author
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor= blue,          % color of internal links
+    citecolor=magenta,        % color of links to bibliography
+    filecolor=cyan,      % color of file links
+    urlcolor=magenta           % color of external links
+}
+%-------------------------------------------------------------------
+\newcommand{\FF}{\vspace*{\medskipamount}}
+\newcommand{\act}[1]{\mbox{#1}}
+\newcommand{\sglspc}{\renewcommand{\baselinestretch}{1.00}\normalsize}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+
+\makeatletter
+\newenvironment{tablehere}{\def\@captype{table}}{}
+\newenvironment{figurehere} {\def\@captype{figure}}{}
+\makeatother
+
+\newcommand{\newphases}{\setcounter{phase}{0}}
+\newcommand{\phase}[1]{\vspace{1 ex}\addtocounter{phase}{1}\par\noindent{\bf \Alph{phase} #1}}
+\newcommand{\phaselabel}[1]{\newsavebox{#1}\sbox{#1}[\Alph{phase}]}
+\newcommand{\phaseref}[1]{\usebox{#1}}
+%------------------------------------------------------------------------
+\makeindex
+\newcolumntype{L}{>{\arraybackslash}m{5.7cm}}
+\newcolumntype{T}{>{\arraybackslash}m{2.3cm}}
+%------------------------------------------------------------------------
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{codeStyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=CodeStyle}
+%---------------------------------------------------------------------
+\begin{document}
+\pagenumbering{roman}
+\include{./pre/coverpage}
+\include{./pre/abstract}
+\include{./pre/declaration}
+%\include{./pre/certificateguide}
+%\include{./pre/certificateexaminer}
+\include{./pre/acknow}
+\cleardoublepage\phantomsection
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\addcontentsline{toc}{chapter}{\numberline{}Table of contents}
+\tableofcontents
+
+
+
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\numberline{}List of tables}
+\listoftables
+
+
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\numberline{}List of figures}
+\listoffigures
+
+\lstlistoflistings
+
+%\include{./pre/abbrev}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+%\newpage\null\thispagestyle{empty}\newpage
+\begin{onehalfspace}
+\include{./chap1/chap1} %Introduction
+\include{./chap2/chap2} %Background study
+\include{./chap3/chap3} %Work done so far
+\include{./chap4/chap4} %Implementation
+\include{./chap5/chap5} %Conclusion
+\end{onehalfspace}
+
+\begin{singlespace}
+\begin{appendices}
+\include{./appendix/abc}
+\include{./appendix/usr}
+\end{appendices}
+\end{singlespace}
+\thispagestyle{empty}
+
+
+
+
+\begin{onehalfspace}
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{Bibliography}
+\nocite{*}
+\bibliographystyle{IEEEtran}
+\bibliography{project}
+\end{onehalfspace}
+
+
+
+\newpage
+\addcontentsline{toc}{chapter}{\numberline{}Index}
+\singlespacing{\printindex}
+
+\end{document}
+
+
+
+
+
