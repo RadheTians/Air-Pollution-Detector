@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "872299658401",
+    "firebase_url": "https://sixsem-ebcb6.firebaseio.com",
+    "project_id": "sixsem-ebcb6",
+    "storage_bucket": "sixsem-ebcb6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872299658401:android:a075b511602bbd10cd84e0",
+        "android_client_info": {
+          "package_name": "com.example.airpollution"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872299658401-i84jij022g9357q349adooo1bg0d6d1d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.airpollution",
+            "certificate_hash": "67a97d3d493d69e14a6f21cff111722a7308fef5"
+          }
+        },
+        {
+          "client_id": "872299658401-qm4hd7ukgms6m83t7b7n7db4pcs2s03o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyActA979xu7puuoPF_j17txfTzxrUlTOjE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872299658401-qm4hd7ukgms6m83t7b7n7db4pcs2s03o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872299658401:android:59f15ab79fc5c203cd84e0",
+        "android_client_info": {
+          "package_name": "com.example.apalert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872299658401-qm4hd7ukgms6m83t7b7n7db4pcs2s03o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyActA979xu7puuoPF_j17txfTzxrUlTOjE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872299658401-qm4hd7ukgms6m83t7b7n7db4pcs2s03o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872299658401:android:b799f64602e5f086cd84e0",
+        "android_client_info": {
+          "package_name": "com.example.weather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872299658401-qm4hd7ukgms6m83t7b7n7db4pcs2s03o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyActA979xu7puuoPF_j17txfTzxrUlTOjE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872299658401-qm4hd7ukgms6m83t7b7n7db4pcs2s03o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
